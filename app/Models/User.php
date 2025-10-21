@@ -22,8 +22,8 @@ class User extends Authenticatable
         'alamat',
         'no_ktp',
         'no_hp',
-        'no_rm',
-        'role',
+        'no_rm', // role dokter tidak dipakai ini
+        'role', // admin, dokter, pasien
         'id_poli',
         'email',
         'password',
