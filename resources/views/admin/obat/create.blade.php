@@ -6,7 +6,7 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <form action="" method="POST">
+                        <form action="{{ route ('obat.store') }}" method="POST">
                             @csrf
 
                             <div class="row">
@@ -14,7 +14,7 @@
                                     <div class="form-group mb-3">
                                         <label for="nama_obat" class="form-label">Nama Obat <span
                                                 class="text-danger">*</span></label>
-                                        <input type="text" class="form-control"
+                                        <input type="text" name="nama_obat" class="form-control"
                                             id="nama_obat" value="{{ old('nama_obat') }}" required>
                                     </div>
                                 </div>
@@ -22,7 +22,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group mb-3">
                                         <label for="kemasan" class="form-label">Kemasan</label>
-                                        <input type="text" id="kemasan"
+                                        <input type="text" name="kemasan" id="kemasan"
                                             class="form-control" placeholder="Contoh: Strip, Botol, Tube">
                                     </div>
                                 </div>
@@ -31,7 +31,7 @@
                             <div class="form-group mb-3">
                                 <label for="harga" class="form-label">Harga <span
                                         class="text-danger">*</span></label>
-                                <input type="number"  id="harga"
+                                <input type="number" name="harga" id="harga"
                                     class="form-control" min="0" step="1" required>
                             </div>
 

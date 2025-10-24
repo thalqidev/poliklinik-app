@@ -29,7 +29,7 @@ class ObatController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'nama_obat' => 'required|string',
             'kemasan' => 'required|string',
             'harga' => 'required|integer',

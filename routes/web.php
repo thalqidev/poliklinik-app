@@ -2,10 +2,19 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cef647d (Tugas 4 Manajemen Obat)
 use App\Http\Controllers\PoliController;
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\PasienController;
 use App\Http\Controllers\ObatController;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cef647d (Tugas 4 Manajemen Obat)
 
 Route::get('/', function () {
     return view('welcome');
@@ -33,7 +42,6 @@ Route::middleware(['auth', 'role:pasien'])->prefix('pasien')->group(function () 
     Route::get('/dashboard', function () {
         return view('pasien.dashboard');
     })->name('pasien.dashboard');
-
 });
 
 Route::middleware(['auth', 'role:admin'])->prefix('admin')->group(function () {
